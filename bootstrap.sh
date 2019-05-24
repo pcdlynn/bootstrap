@@ -76,7 +76,7 @@ echo "###############################################################"
 echo "######## Get public bootstrap playbook"
 echo "###############################################################"
 PLAYBOOK=bootstrap-git.yml
-wget -O https://raw.githubusercontent.com/pcdlynn/bootstrap/master/$PLAYBOOK --output-document=$WORK_DIR/$PLAYBOOK
+wget -qO- https://raw.githubusercontent.com/pcdlynn/bootstrap/master/$PLAYBOOK --output-document=$WORK_DIR/$PLAYBOOK
 
 echo "###############################################################"
 echo "######## Downloaded $WORK_DIR/$PLAYBOOK"
