@@ -59,3 +59,14 @@
     loop: "{{ users }}"
     loop_control:
       loop_var: user
+
+  - name: file ownership
+    file:
+      path: /home/{{ user.username_os }}/bootstrap
+      state: directory
+      recurse: yes
+      owner: "{{ user.username_os }}"
+      group: "{{ user.username_os }}"
+    loop: "{{ users }}"
+    loop_control:
+      loop_var: user
