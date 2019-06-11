@@ -45,12 +45,10 @@ ls -la
 echo "###############################################################"
 echo "######## Installs (relatively quietly)"
 echo "###############################################################"
-sudo apt-get install software-properties-common -y -q
-sudo apt-add-repository ppa:ansible/ansible -y
-sudo apt-get update -qq 		# Need after the add repo
-sudo apt-get install ansible -y  -q
-sudo apt-get install vim
-sudo apt-get install neofetch
+# sudo apt-get install software-properties-common -y -q
+# sudo apt-add-repository ppa:ansible/ansible -y
+# sudo apt-get update -qq 		# Need after the add repo
+# sudo apt-get install ansible -y  -q
 
 echo "###############################################################"
 echo "######## Sanity deets"
