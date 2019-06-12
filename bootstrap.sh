@@ -66,11 +66,11 @@ echo "###############################################################"
 if [ -e ansible.hosts ]; then
     sudo cp ansible.hosts "ansible.hosts.`date --iso`"
 fi
-echo "inventory = ansible.hosts"  | sudo tee ansible.hosts
+echo -e "localhost ansible_connection=local"  | sudo tee ansible.hosts
 if [ -e ansible.cfg ]; then
     sudo cp ansible.cfg "ansible.cfg.`date --iso`"
 fi
-echo -e "[defaults]\nlocalhost ansible_connection=local" | sudo tee ansible.cfg
+echo -e "[defaults]\ninventory = ansible.hosts" | sudo tee ansible.cfg
 # cat /etc/ansible/hosts
 ls -la
 
